@@ -1,5 +1,4 @@
 # Copyright © 2020 Dimitris Lampropoulos
-# Licensed under the terms of the MIT License
 
 import os
 import csv
@@ -46,14 +45,14 @@ def check_Txts(file_lst):
                     exampleData[y][2] = float(exampleData[y][2])
                     
                 except ValueError as err:
-                    print(err.args, end="\n\n")
-                    print(f"The error is in the file {i} in row {exampleData[y][0],exampleData[y][1],exampleData[y][2]}")
+                    print(err.args, end="\n")
+                    print(f"The error is in the file {i} in row {exampleData[y][0],exampleData[y][1],exampleData[y][2]}", end="\n\n")
                     break
         
 def DrawPolygons(file_lst):
     """
     Input: the list of the txts' paths
-    Writes a shapefile on the specified path and all the Polygons of the txts in it.
+    Returns a shapefile in the specified folder with all the Polygons of the txts.
     """
     try:        
         poly_lst = []
