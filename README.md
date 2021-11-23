@@ -2,7 +2,7 @@
 This little program handles files of txts with coordinates for polygons and outputs a shapefile with all the polygons drawn. 
 All the coordinates in the txts must be in order for the polygon to be drawn correctly.
 
-It has three functions.
+It has three functions:
 
 -loadTxts asks for the folder where all the txts are in. Then creates a list with the paths of all the txts.
 
