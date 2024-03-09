@@ -65,7 +65,7 @@ def DrawPolygons(file_lst):
                 gdf = gpd.GeoDataFrame(x, geometry=gpd.points_from_xy(x[1],x[2]))
                 # Iterate through all the rows of the GeoDataFrame and append a new list with all the x,y sets of one whole txt
                 y = []
-                for idx, row in x.iterrows():
+                for idx, row in gdf.iterrows():
                     y.append(row['geometry'])
 
                 # Transform every list of x,y of one polygon to a Polygon and append this polygon to the list of Polygons
